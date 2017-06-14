@@ -1,0 +1,119 @@
+Predicted: O O O O O O O O O O O O O O O O O
+Correct:   O O O O O O O O O B-other O O O O O O O
+D:\Support Structure\Python\WinPython-64bit-3.5.2.3\python-3.5.2.amd64\lib\site-packages\sklearn\metrics\classification.py:1113: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+               precision    recall  f1-score   support
+
+    B-company       0.50      0.15      0.24        39
+    I-company       0.00      0.00      0.00        10
+   B-facility       0.48      0.32      0.38        38
+   I-facility       0.48      0.41      0.44        39
+    B-geo-loc       0.49      0.31      0.38       116
+    I-geo-loc       0.53      0.21      0.31        42
+      B-movie       0.00      0.00      0.00        15
+      I-movie       0.00      0.00      0.00        15
+B-musicartist       0.00      0.00      0.00        41
+I-musicartist       0.00      0.00      0.00        35
+      B-other       0.36      0.12      0.18       132
+      I-other       0.15      0.20      0.17        97
+     B-person       0.59      0.32      0.42       171
+     I-person       0.59      0.34      0.43        95
+    B-product       0.75      0.08      0.15        37
+    I-product       0.77      0.08      0.15       121
+ B-sportsteam       0.20      0.01      0.03        70
+ I-sportsteam       0.00      0.00      0.00        13
+     B-tvshow       0.00      0.00      0.00         2
+
+  avg / total       0.43      0.19      0.24      1128
+
+Top likely transitions:
+B-facility -> I-facility 7.574435
+B-sportsteam -> I-sportsteam 6.701834
+B-musicartist -> I-musicartist 6.061543
+B-movie -> I-movie 5.980370
+B-product -> I-product 5.824132
+B-other -> I-other 5.574917
+I-facility -> I-facility 5.491905
+B-tvshow -> I-tvshow 5.374600
+I-product -> I-product 5.340112
+I-movie -> I-movie 5.253143
+I-musicartist -> I-musicartist 5.220945
+B-person -> I-person 5.212239
+B-company -> I-company 5.114657
+I-other -> I-other 5.026568
+B-geo-loc -> I-geo-loc 4.988825
+
+Top unlikely transitions:
+I-other -> I-person -0.381144
+I-company -> O       -0.394284
+B-musicartist -> O       -0.643656
+B-tvshow -> O       -1.068589
+B-movie -> O       -1.568128
+O      -> I-facility -2.906336
+O      -> I-sportsteam -2.907958
+O      -> I-company -2.949992
+O      -> I-geo-loc -3.128100
+O      -> I-musicartist -3.168849
+O      -> I-tvshow -3.375391
+O      -> I-product -3.498161
+O      -> I-movie -3.538256
+O      -> I-other -4.670409
+O      -> I-person -4.761033
+Top positive:
+8.677489 B-company word.lower=twitter
+7.174786 B-person word.lower=pope
+6.156311 B-company word.lower=youtube
+5.875267 B-company word.lower=facebook
+5.343917 B-geo-loc word.lower=uk
+4.873459 B-product word.lower=ipad
+4.841675 B-product word.lower=xbox
+4.697276 I-other -1:word.lower=fashion
+4.690004 B-product word.lower=ipod
+4.672099 B-person word.lower=taylor
+4.649347 B-other word[-2:]=BL
+4.541156 B-geo-loc -1:word.lower=beat
+4.270811 B-person word.lower=trey
+4.012305 B-geo-loc word.lower=jupiter
+3.844065 B-musicartist -1:word.lower=group
+3.843940 B-facility -1:word.lower=at
+3.796558 B-geo-loc word[-3:]=nia
+3.635640 I-person word.lower=bieber
+3.468168 B-product word.lower=iphone
+3.430688 B-movie word[-2:]=ha
+
+Top negative:
+-1.616906 O      word[-2:]=ka
+-1.685690 O      word[-2:]=KY
+-1.685865 B-facility -1:word.istitle=True
+-1.708714 O      -1:word.lower=dj
+-1.726935 O      word[-2:]=LE
+-1.766111 O      word[-3:]=oys
+-1.842083 O      +1:word.lower=v
+-1.843755 O      word[-3:]=END
+-1.900737 O      word[-2:]=ez
+-1.908418 O      +1:word.lower=song
+-2.082061 O      word[-2:]=BB
+-2.132507 O      -1:word.lower=then
+-2.157073 O      word[-3:]=ube
+-2.297084 O      word[-3:]=ggy
+-2.387055 O      +1:word.lower=fans
+-2.761387 O      -1:word.lower=national
+-2.814917 O      word[-3:]=ndo
+-2.971948 O      word[-3:]=lds
+-2.973534 O      word[-2:]=mi
+-3.095805 O      word.lower=rose
+
+
+=================== CONLLEVAL ====================
+processed 61709 tokens with 3473 phrases; found: 1411 phrases; correct: 656.
+accuracy:  91.36%; precision:  46.49%; recall:  18.89%; FB1:  26.86
+          company: precision:  65.17%; recall:   9.34%; FB1:  16.34  89
+         facility: precision:  48.03%; recall:  28.85%; FB1:  36.05  152
+          geo-loc: precision:  64.45%; recall:  37.41%; FB1:  47.35  512
+            movie: precision:  50.00%; recall:   2.94%; FB1:   5.56  2
+      musicartist: precision:   0.00%; recall:   0.00%; FB1:   0.00  6
+            other: precision:  22.53%; recall:   7.02%; FB1:  10.70  182
+           person: precision:  33.03%; recall:  30.50%; FB1:  31.72  445
+          product: precision:  50.00%; recall:   2.03%; FB1:   3.91  10
+       sportsteam: precision:  11.11%; recall:   0.68%; FB1:   1.28  9
+           tvshow: precision:   0.00%; recall:   0.00%; FB1:   0.00  4
